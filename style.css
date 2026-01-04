@@ -1,0 +1,647 @@
+/* =====================================
+   WARM FOOD DESIGN SYSTEM
+===================================== */
+:root {
+  --primary: #f97316;      /* warm orange */
+  --primary-dark: #ea580c;
+  --accent: #fde68a;       /* soft yellow */
+  --dark: #1c1917;
+  --light: #ffffff;
+  --muted: #78716c;
+  --bg: #fff7ed;
+
+  --radius: 16px;
+  --shadow: 0 15px 35px rgba(0,0,0,.12);
+  --transition: all .35s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Inter", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--dark);
+  line-height: 1.75;
+}
+
+/* =====================================
+   LAYOUT HELPERS
+===================================== */
+.container {
+  width: 92%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* =====================================
+   WELCOME SLIDE
+===================================== */
+.welcome-slide {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #f97316, #fb923c);
+  display: grid;
+  place-items: center;
+  z-index: 9999;
+  animation: welcomeFade 3s ease forwards;
+}
+
+.welcome-slide h1 {
+  color: rgb(161, 233, 78);
+body {
+  font-size: 23px;
+}
+
+h1 {
+  font-size: clamp(3rem, 6vw, 5rem);
+}
+
+h2 {
+  font-size: clamp(3rem, 5vw, 4rem);
+}
+
+p {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+}
+
+@keyframes welcomeFade {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+/* =====================================
+   HEADER / NAV
+===================================== */
+.header {
+  position: sticky;
+  top: 0;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,.08);
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+}
+
+.logo {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--dark);
+  margin-left: 24px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+/* =====================================
+   HERO (IMAGE SPACE READY)
+   Replace URL with your own image
+===================================== */
+.hero {
+  height: 90vh;
+  position: relative;
+  background: url("https://via.placeholder.com/1600x900") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  
+}
+
+.hero .overlay {
+  position: relative;
+  color: white;
+  padding: 0 4%;
+  max-width: 650px;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  margin-bottom: 14px;
+  
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  color: #fef3c7;
+}
+
+/* =====================================
+   ORDER BUTTONS (CONVERSION FOCUSED)
+===================================== */
+.btn {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+}
+
+/* =====================================
+   VIDEO SECTION
+===================================== */
+.video-section {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.video-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+.video-placeholder {
+  height: 320px;
+  background: #fed7aa;
+  border-radius: var(--radius);
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+  color: var(--dark);
+}
+
+/* =====================================
+   FEATURES
+===================================== */
+.features {
+  padding: 80px 0;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.feature-card {
+  background: white;
+  padding: 36px 28px;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.feature-card h3 {
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+.footer {
+  background: #1c1917;
+  color: #fde68a;
+  text-align: center;
+  padding: 30px 0;
+}
+
+/* =====================================
+   MOBILE OPTIMIZATION
+===================================== */
+@media (max-width: 768px) {
+  nav a {
+    margin-left: 16px;
+    font-size: .95rem;
+  }
+
+  .hero {
+    height: 80vh;
+  }
+
+  .hero .overlay {
+    padding: 0 6%;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* =========================
+   ABOUT PAGE STYLES
+========================= */
+.page-hero {
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-hero-overlay {
+  background: rgba(0,0,0,.5);
+  padding: 40px;
+  text-align: center;
+  color: white;
+  border-radius: 12px;
+}
+
+.page-hero h2 {
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.light-bg {
+  background: #fff7ed;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  align-items: center;
+}
+
+.about-text h3 {
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.about-text p {
+  margin-bottom: 16px;
+  color: #444;
+}
+
+.about-text ul {
+  padding-left: 20px;
+}
+
+.about-text ul li {
+  margin-bottom: 8px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0,0,0,.15);
+}
+
+.center {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Active nav link */
+nav a.active {
+  color: var(--primary);
+  font-weight: 600;
+}
+/* General page styles */
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff5f0;
+  color: #333;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #ff5722;
+  margin: 40px 0 20px;
+  letter-spacing: 1px;
+}
+
+/* Culinary Crew Grid */
+.culinary-crew {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Crew Images */
+.crew-img {
+  width: 120px;       /* Fixed small size for perfect grid */
+  height: auto;       /* Maintain proportion */
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.crew-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .crew-img { width: 100px; }
+}
+
+@media (max-width: 768px) {
+  .crew-img { width: 80px; }
+}
+
+@media (max-width: 480px) {
+  .crew-img { width: 70px; }
+}
+
+/* Footer */
+.footer {
+  background: #1f2933;
+  color: #fff;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+.page-hero {
+  background: linear-gradient(135deg, #ff9a76, #ff5722); /* soft warm gradient */
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Optional: subtle pattern overlay for extra depth */
+.page-hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url('img/hero-pattern.png'); /* optional subtle pattern */
+  opacity: 0.1; /* very soft */
+  pointer-events: none;
+}
+
+/* Hero text */
+.page-hero h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  z-index: 1;
+  position: relative;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .page-hero h2 {
+    font-size: 2rem;
+  }
+  .page-hero {
+    padding: 60px 15px;
+  }
+}
+/* Set global text color to blue */
+body {
+  color: #1e90ff; /* Dodger Blue, change if you want another shade */
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Exclude hero section text */
+.page-hero,
+.page-hero h2,
+p,
+.section p,
+.section h2 {
+  color: inherit; /* keep default or your desired color */
+}
+
+/* Force other headings (h1, h3, h4, etc.) to blue */
+h1, h3, h4, h5, h6, a, li, span {
+  color: #1e90ff;
+}
+
+/* Links inside footer or other areas */
+footer, footer a {
+  color: #1e90ff;
+}
+
+/* Optional: keep paragraphs in sections default dark for readability */
+.section p {
+  color: #333;
+}
+/* ===== GENERAL ===== */
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  background: #fff5f0;
+  color: #1e90ff; /* primary text color */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== HEADER ===== */
+.header {
+  background: #ff5722;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.header nav a:hover,
+.header nav a.active {
+  color: #ffd700; /* highlight color */
+}
+
+/* ===== HERO ===== */
+.page-hero {
+  background: linear-gradient(135deg, #ff9a76, #ff5722);
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.page-hero h2 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+  padding: 60px 20px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  align-items: start;
+}
+
+/* Contact info styling */
+.contact-info p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Contact form styling */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ff5722;
+  outline: none;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form .btn {
+  background: #ff5722;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form .btn:hover {
+  background: #e64a19;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #1f2933;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+  }
+
+  .header nav a {
+    margin: 10px 5px 0;
+  }
+
+  .page-hero h2 {
+    font-size: 2rem;
+  }
+}
+.contact-whatsapp {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  background: #25d366;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.whatsapp-btn:hover {
+  background: #128c7e;
+  transform: scale(1.05);
+}
+
+.whatsapp-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  color: #fff; /* makes the SVG white */
+}
+/* Add to your CSS */
+#heroCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* so clicks pass through */
+  z-index: 10;
+}
+@media (max-width: 768px) {
+  nav a {
+    font-size: 1.5rem;
+    margin-left: 0;
+    padding: 12px 0;
+    display: block;
+  }
+}

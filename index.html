@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nkemakonam Foods | Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<!-- Add this inside your <body> but above </body> -->
+<canvas id="heroCanvas"></canvas>
+
+<body>
+
+<!-- WELCOME SLIDE -->
+<div class="welcome-slide" id="welcomeSlide">
+  <h1>Nkemakonam says Welcome 🍽️</h1>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container nav">
+    <h2 class="logo">Nkemakonam Foods</h2>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Menu</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO SLIDER -->
+<section class="hero">
+  <div class="slide active" style="background-image:url('https://via.placeholder.com/1600x800');">
+    <div class="overlay">
+      <h1>Delicious Meals Made With Love</h1>
+      <p>Fresh • Tasty • Unforgettable</p>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image:url('https://via.placeholder.com/1600x800/ff7a18/ffffff');">
+    <div class="overlay">
+      <h1>Food That Awakens Your Appetite</h1>
+      <p>Every bite tells a story</p>
+    </div>
+  </div>
+</section>
+
+<section class="video-section">
+  <div class="container">
+    <h2>An outdoor service</h2>
+    <video controls class="video-player">
+      <source src="video/nkemakonam.mp4" type="video/mp4">
+      Y
+    </video>
+  </div>
+</section>
+
+
+<!-- FEATURED SECTION -->
+<section class="features">
+  <div class="container grid-3">
+    <div class="feature-card">
+      <h3>Fresh Ingredients</h3>
+      <p>Only the best ingredients go into our meals.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Fast Delivery</h3>
+      <p>Hot and fresh, straight to your doorstep.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Affordable Prices</h3>
+      <p>Luxury taste without luxury prices.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Nkemakonam Foods. All Rights Reserved.</p>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const colors = [
+    "#fff86d", // warm yellow
+    "#ffe0b2", // soft cream
+    "#ffd54f", // golden
+    "#ffecb3"  // light butter
+  ];
+
+  let index = 0;
+
+  document.body.style.transition = "background-color 1.2s ease-in-out";
+
+  setInterval(() => {
+    document.body.style.backgroundColor = colors[index];
+    index = (index + 1) % colors.length;
+  }, 3000);
+});
+
+</script>
+</body>
+</html>
